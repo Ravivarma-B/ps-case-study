@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.card {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 0;
+    margin: 10px;
+    min-height: 200px;
+}
+
+.align-center {
+    text-align: center;
+}

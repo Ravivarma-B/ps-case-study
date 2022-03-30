@@ -1,0 +1,15 @@
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+
+    button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

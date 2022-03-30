@@ -1,0 +1,17 @@
+.banner div {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 50px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .banner {
+        zoom: 0.5;
+    }
+
+    .banner div {
+        padding: 25px;
+        margin: 40px;
+    }
+
+}

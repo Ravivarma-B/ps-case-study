@@ -1,0 +1,44 @@
+<section style="background-color: #eee;">
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-row-reverse">
+                <div class="p-2">
+                    <select name="productFilters" [(ngModel)]="filterMode" class="form-control">
+                        <option value="0">All Products</option>
+                        <option value="1">Low to High</option>
+                        <option value="2">High to Low</option>
+                    </select>
+                </div>
+                <div class="btn-group p-2" role="group">
+                    <button type="button" class="btn btn-warning" (click)="gridMode=true"><i class="fa fa-th fa-lg" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-warning" (click)="gridMode=false"><i class="fa fa-list fa-lg" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+       
+      <div class="row">
+        <div
+         [ngClass]="gridMode == true?'col-md-3 col-lg-3 mb-3 mb-md-3':'col-md-6 col-lg-6 mb-6 mb-md-3'" 
+         *ngFor="let product of productData">
+          <div class="card">
+            <img
+            [src]="product.image"
+            class="card-img-top"
+          />
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">{{product.name}}</h5>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">Price</h5><h5 class="text-dark mb-0"><span class="small text-danger"><s>${{product.price}}</s></span> ${{product.price - product.discount}}</h5>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <h5 class="mb-0">Rating</h5>
+                <div class="ms-auto text-warning">{{product.rating}} <i class="fa fa-star" [ngClass]="'fa fa-star-o'"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

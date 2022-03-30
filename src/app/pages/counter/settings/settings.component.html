@@ -1,0 +1,8 @@
+<div>
+    <label for="counter">Enter Timer Limit</label>
+    <input type="text" class="form-control" name="counter" [(ngModel)]="countdown">
+</div> 
+<div class="mt-3">
+    <button class="btn btn-sm btn-primary me-3" [disabled]="countdown==0" (click)="emitState(state === 'Start' ? 'Pause' : 'Start')">Start/Pause</button>
+    <button class="btn btn-sm btn-secondary"  (click)="countdown=0; emitState(null); ">Reset</button>
+</div>

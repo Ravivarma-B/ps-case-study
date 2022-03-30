@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-5">
+        <app-timer class="card align-center pt-5"  [countdown]="counter" [timerState]="timerState"></app-timer>
+    </div>
+    <div class="col-7">
+        <app-settings class="card" (stateEmitter)="timerState=$event" (countdownEmitter)="counter=$event"></app-settings>
+    </div>
+    <div class="col-5">
+        <app-logs class="card" [timerState]="timerState"></app-logs>
+    </div>
+    <div class="col-7"> 
+        <app-track class="card align-center pt-5" [timerState]="timerState"></app-track>
+    </div>
+</div>

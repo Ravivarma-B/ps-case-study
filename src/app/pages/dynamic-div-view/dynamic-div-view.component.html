@@ -1,0 +1,5 @@
+<div class="container-fluid" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class="card" *ngFor="let card of cards; let i = index">
+        <button class="btn btn-sm btn-primary" (click)="showAlert(i)">Click</button>
+    </div>
+</div>
